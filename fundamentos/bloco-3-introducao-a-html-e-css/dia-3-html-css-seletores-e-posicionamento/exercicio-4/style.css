@@ -1,0 +1,35 @@
+div:hover{
+    border: 2px solid black;
+}
+
+#div-1{
+    background-color: #F5D25C;
+}
+#div-2{
+    background-color: #1E31A8;
+}
+#div-3{
+    background-color: #5D72F5;
+}
+#div-4{
+    background-color: #A88C2F;
+}
+#div-5{
+    background-color: #FFE07A;
+}
+
+#h3-1{
+    text-align: left;
+}
+#h3-2{
+    text-align: center;
+}
+#h3-3{
+    text-align: center;
+}
+#h3-4{
+    text-align: center;
+}
+#h3-5{
+    text-align: right;
+}
