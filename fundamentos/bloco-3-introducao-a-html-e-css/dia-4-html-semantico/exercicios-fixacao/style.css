@@ -1,0 +1,54 @@
+
+h1 {
+ text-align: center;
+    }
+
+ul{
+    padding: 0;
+    
+    
+    margin: auto;
+}
+h3{
+    margin-top: 50px;
+}
+.first {
+    background-color: rgb(235, 200, 84);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 200px;
+    list-style: none;
+    margin: auto;
+    }
+
+.second {
+    background-color: rgb(219, 219, 219);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+    margin-left: 95px;
+}
+
+.third {
+    background-color: rgb(170, 142, 106);
+    font-size: 20px;
+    height: 50px;
+    text-align: center;
+    width: 300px;
+    display: inline-block;
+}
+
+#sec-thi{
+    width: 800px;
+    margin: auto;
+}
+
+#second-section{
+    text-align: center;
+}
+#second-section > ul > li{
+    display: inline;
+}
