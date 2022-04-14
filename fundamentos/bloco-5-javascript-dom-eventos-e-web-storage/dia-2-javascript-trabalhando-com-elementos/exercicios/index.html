@@ -103,12 +103,26 @@
         }
 
         for (let index = 0; index < 3; index += 1){
-            let elementLi = document.createElement("h3")
-            elementMain.appendChild(elementLi);
+            let elementH3 = document.createElement("h3")
+            elementH3.className = "description";
+            elementMain.appendChild(elementH3);
         }
 
+        elementH1.className = "title"
+        
+        let elementMainD = document.getElementsByClassName("main-content")[0];
+        elementMainD.removeChild(elementMainD.children[1]);
+   
+        let elementSectionRD = document.getElementsByClassName("right-content")[0];
+        elementSectionRD.style.margin = "auto"
+   
+        let elementSectionD = document.getElementsByClassName("center-content")[0];
+        elementSectionD.parentNode.style.backgroundColor = "green";
 
-    </script>
+        let elementUlD = document.getElementsByTagName("ul")[0];
+        elementUlD.removeChild(elementUlD.lastChild.previousSibling)
+        elementUlD.removeChild(elementUlD.lastChild);
+   </script>
 </body>
 
 </html>
