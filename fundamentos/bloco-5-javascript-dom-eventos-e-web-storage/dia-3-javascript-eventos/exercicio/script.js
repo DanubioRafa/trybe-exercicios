@@ -21,7 +21,7 @@ for (index of dezDaysList) {
   let elementLi = document.createElement("li");
   let elementUl = document.getElementById("days");
 
-  if (index == 25 || index == 25){
+  if (index == 25 || index == 25) {
     elementLi.classList = "day friday holiday";
   } else if (index == 24 || index == 31) {
     elementLi.classList = "day holiday";
@@ -31,6 +31,8 @@ for (index of dezDaysList) {
     elementLi.className = "day";
   }
   elementLi.innerText = index;
+  elementLi.addEventListener("mouseover", zoom);
+  elementLi.addEventListener("mouseout", zoomOut);
   elementLi.style.backgroundColor = "rgb(238,238,238)";
   elementUl.appendChild(elementLi);
   console.log((elementLi.style.backgroundColor));
@@ -97,3 +99,29 @@ function createButtonFridays() {
 }
 
 createButtonFridays();
+
+/*Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês 
+no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve 
+retornar ao tamanho original.*/
+
+function zoom (event){
+  event.target.style.fontSize = "2.2em";
+}
+
+function zoomOut (event1){
+  event1.target.style.fontSize = "1.4em";
+}
+
+document.getElementById("btn-add").addEventListener("click", addTask);
+
+function addTask (){
+  let elementTaskInput = document.getElementById("task-input").value;
+  let elementDiv = document.createElement("span");
+  elementDiv.innerText = elementTaskInput;
+  
+  if (elementTaskInput !== ""){
+   (document.getElementsByClassName("my-tasks")[0]).appendChild(elementDiv);
+  } else {
+    window.alert("Escreva alguma coisa");
+  }
+}
