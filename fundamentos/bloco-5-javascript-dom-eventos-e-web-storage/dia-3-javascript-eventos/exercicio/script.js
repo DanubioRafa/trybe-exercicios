@@ -100,9 +100,6 @@ function createButtonFridays() {
 
 createButtonFridays();
 
-/*Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês 
-no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve 
-retornar ao tamanho original.*/
 
 function zoom (event){
   event.target.style.fontSize = "2.2em";
@@ -121,7 +118,26 @@ function addTask (){
   
   if (elementTaskInput !== ""){
    (document.getElementsByClassName("my-tasks")[0]).appendChild(elementDiv);
+    let corChosen = window.prompt("Escolha uma cor");
+    createDivLegend(corChosen);
   } else {
     window.alert("Escreva alguma coisa");
   }
+
+  function createDivLegend(cor){
+    let elementDivMyTasks = document.getElementsByClassName("my-tasks")[0];
+    let elementDiv = document.createElement("div");
+    elementDiv.addEventListener("click", selectClass)
+    elementDiv.className = "task";
+    elementDiv.style.backgroundColor = cor;
+  
+    elementDivMyTasks.appendChild(elementDiv);
+  
+  }
+}
+
+function selectClass(event){
+  let divSelected = event.target;
+  divSelected.classList.toggle("selected");
+
 }
