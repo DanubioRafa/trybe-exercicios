@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Bem vindo ao exercicio 5.4</h1>
+
+
+    <input type="text" id="inputBackground" placeholder="Digite uma cor">
+    <input type="text" id="inputColorText" placeholder="Digite uma cor">
+    <input type="text" id="inputFontSize" placeholder="Digite um tamanho + medida">
+    <input type="text" id="inputLineHeight" placeholder="Digite um tamanho + medida">
+    <input type="text" id="inputFontFamily" placeholder="Digite uma font-family">
+
+    <h2>What is Lorem Ipsum?</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+        when an unknown printer took a galley of type and scrambled it to make a type
+        specimen book. It has survived not only five centuries, but also the leap into
+        electronic typesetting, remaining essentially unchanged. It was popularised in
+        the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+        and more recently with desktop publishing software like Aldus PageMaker
+        including versions of Lorem Ipsum.</p>
+
+    <script>
+        let elementInputBG = document.getElementById("inputBackground");
+        let elementInputColor = document.getElementById("inputColorText");
+        let elementInputSize = document.getElementById("inputFontSize");
+        let elementInputHeigth = document.getElementById("inputLineHeight");
+        let elementInputFamily = document.getElementById("inputFontFamily");
+
+        document.getElementById("inputBackground").addEventListener("change", changeBackground);
+        let chosenBackGroundColor = elementInputBG.value;
+
+        elementInputColor.addEventListener("change", changeColor);
+        let chosenColorText = elementInputColor.value;
+
+        elementInputSize.addEventListener("change", changeSize);
+        let chosenFontSize = elementInputSize.value;
+
+        elementInputHeigth.addEventListener("change", changeHeight);
+        let chosenLineHeight = elementInputHeigth.value;
+
+        elementInputFamily.addEventListener("change", changeFamily);
+        let chosenFontFamily = elementInputFamily.value;
+        let elementBody = document.body.style;
+
+        console.log((localStorage.kBackgroundColor))
+        if (localStorage.kBackgroundColor == null) {
+            localStorage.setItem("kBackgroundColor", "");
+        } else {
+            elementBody.backgroundColor = localStorage.kBackgroundColor;
+        }
+
+        if (localStorage.kColorText == null) {
+        localStorage.setItem("kColorText", "");
+        } else {
+            elementBody.color = localStorage.kColorText;
+        }
+        if (localStorage.kFontSize == null) {
+        localStorage.setItem("kFontSize", "");
+        } else {
+            elementBody.fontSize = localStorage.kFontSize;
+        }
+        if (localStorage.kLineHeight == null) {
+        localStorage.setItem("kLineHeight", "");
+        } else {
+            elementBody.lineHeight = localStorage.kLineHeight;
+        }
+        if (localStorage.kFontFamily == null) {
+        localStorage.setItem("kFontFamily", "");
+        } else {
+            elementBody.fontFamily = localStorage.kFontFamily;
+        }
+
+        function changeBackground() {
+            localStorage.kBackgroundColor = elementInputBG.value;
+            elementBody.backgroundColor = localStorage.kBackgroundColor;
+        }
+
+        function changeColor() {
+            localStorage.kColorText = elementInputColor.value;
+            elementBody.color = localStorage.kColorText;
+        }
+
+        function changeSize() {
+            localStorage.kFontSize = elementInputSize.value;
+            elementBody.fontSize = localStorage.kFontSize;
+        }
+
+        function changeHeight() {
+            localStorage.kLineHeight = elementInputHeigth.value;
+            elementBody.lineHeight = localStorage.kLineHeight;
+        }
+
+        function changeFamily() {
+            localStorage.kFontFamily = elementInputFamily.value;
+            elementBody.fontFamily = localStorage.kFontFamily;
+        }
+
+        /*elementBody.backgroundColor = localStorage.kBackgroundColor;
+        elementBody.color = getLocal("kColorText");
+        elementBody.fontSize = getLocal("kFontSize");
+        elementBody.lineHeight = getLocal("kLineHeight");
+        elementBody.fontFamily = getLocal("kFontFamily");*/
+
+
+        /*As pessoas devem ter o poder de alterar:
+Cor de fundo da tela;
+Cor do texto;
+Tamanho da fonte;
+Espaçamento entre as linhas do texto;
+Tipo da fonte ( Font family ).*/
+    </script>
+</body>
+
+</html>
