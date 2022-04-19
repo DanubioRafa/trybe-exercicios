@@ -31,6 +31,7 @@ for (index of dezDaysList) {
     elementLi.className = "day";
   }
   elementLi.innerText = index;
+  elementLi.addEventListener("click", givesColor);
   elementLi.addEventListener("mouseover", zoom);
   elementLi.addEventListener("mouseout", zoomOut);
   elementLi.style.backgroundColor = "rgb(238,238,238)";
@@ -140,4 +141,22 @@ function selectClass(event){
   let divSelected = event.target;
   divSelected.classList.toggle("selected");
 
+}
+
+/*Implemente uma função que adiciona um evento que, ao clicar em um dia do mês no calendário, 
+atribua a este dia a cor da legenda da sua tarefa selecionada.
+Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial rgb(119,119,119) . */
+
+function givesColor(event){
+ let elementLiTarget = event.target;
+  elementLiTarget.style.color = document.getElementsByClassName("selected")[0].style.backgroundColor;
+  
+  console.log((elementLiTarget.className))
+
+  if (elementLiTarget.classList.contains("colored")){
+    console.log("algo")
+    elementLiTarget.style.color = "rgb(119,119,119)"
+  }
+
+  elementLiTarget.classList.toggle("colored");
 }
