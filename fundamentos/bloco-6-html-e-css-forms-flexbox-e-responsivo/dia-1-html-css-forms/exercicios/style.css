@@ -1,0 +1,22 @@
+form fieldset {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: baseline;
+}
+.input-text{
+    width: 200px;
+}
+textarea {
+    margin-top: 10px;
+    max-width: 400px;
+    max-height: 100px;
+    display: block;
+}
+#date {
+    margin-top: 10px;
+    display: block;
+}
+button {
+    width: 100px;
+}

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -17,17 +18,18 @@
             <fieldset>
                 <div id="line-1">
                     <label for="input-name">
-                        Nome
+                        Nome:
                     </label>
-                    <input type="text" name="nome" id="input-name" minlength="10" maxlength="40">
+                    <input type="text" name="nome" id="input-name" minlength="10" maxlength="40" class='input-text'>
                 </div>
                 <div id="line-2">
-                    <label for="input-email">
+                    <label for="input-email" >
                         Email:
                     </label>
-                    <input type="email" name="email" id="input-email" minlength="10" maxlength="50">
+                    <input type="email" name="email" id="input-email" minlength="10" maxlength="50" class='input-text'>
                 </div>
                 <div id="line-3">
+                    <label>Destino Preferido:</label>
                     <input type="radio" name="stack" id="cidade" value="cidade" checked>
                     <label for="cidade">Cidade</label>
                     <input type="radio" name="stack" id="Campo" value="Campo">
@@ -40,17 +42,22 @@
                 </div>
                 <div id="line-4">
                     <label for="answer">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
-                    <textarea name="answer" id="answer" maxlength="500"></textarea>
+                    <textarea name="answer" id="answer" maxlength="500" class='input-text'></textarea>
                 </div>
                 <div id="line-5">
                     <label for="date">Qual a melhor data para realizar a sua viagem?</label>
                     <input type="date" name="date" id="date">
                 </div>
                 <div id="line-6">
-                    <label for="oportunidades">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
-                    <input type="checkbox" name="oportunidades" id="oportunidades">
-                    <label for="news">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
-                    <input type="checkbox" name="imagens" id="imagens">
+                    <div>
+                        <label for="oportunidades">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+                        <input type="checkbox" name="oportunidades" id="oportunidades">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="imagens">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+                        <input type="checkbox" name="imagens" id="imagens">
+                    </div>
                 </div>
                 <button type="submit" id="submit">Enviar</button>
                 <button type="reset">Reset</button>
