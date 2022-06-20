@@ -1,0 +1,15 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    border: 2px solid green;
+    border-radius: 5px;
+}
